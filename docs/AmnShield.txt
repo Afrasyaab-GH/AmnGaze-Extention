@@ -1,0 +1,102 @@
+🛡️ AmnShield Web Extension — Complete Feature & Development Plan
+1. Overview
+AmnShield Web Extension is a comprehensive digital protection system that enforces spiritual discipline, focus, and safe browsing.
+It provides:
+• Islamic Mode (Flexible + Full Protection)
+• Work Mode
+• School Mode
+• Personal Protection Mode
+• Time-based and timetable-based blocking
+• Default Tab Integration for Islamic reminders, Qur’an, Hadith, du‘ā, and motivational content
+The extension is cross-platform ready (web first), with cloud sync for unlock codes, schedules, and tamper detection.
+2. Modes of Protection
+2.1 Islamic Mode — Two Layers
+2.1.1 Flexible Islamic Protection (Dynamic Schedule)
+Characteristics:
+• Non-editable by the user
+• Auto-blocks based on: 
+• Daily prayer times (1 hour before → 1 hour after each prayer)
+• Sleep period (Isha → Fajr, ~9–10 hours)
+• Jumu‘ah (Friday) — all day
+• Ramadan — all week during fasting hours
+• Sacred Months — Muharram, Dhul-Qi’dah, Dhul-Hijjah, Rajab (full-month protection)
+• Special Islamic Days — Laylat al-Qadr, Eid, Ashura, and other significant dates
+Default Tab displays:
+• Prayer countdowns
+• Qur’an verses
+• Du‘ā
+• Reflection prompts
+• Sacred month notifications
+Blocking Windows Table:
+EventBlock StartBlock EndFajr1 hour before1 hour afterDhuhr1 hour before1 hour afterAsr1 hour before1 hour afterMaghrib1 hour before1 hour afterIsha1 hour before1 hour afterJumu‘ahAll dayAll dayRamadanFajr → MaghribAll weekSacred MonthsFull monthFull monthSpecial Islamic DaysAll dayAll day 
+JSON Example:
+{ "mode": "islamic", "variant": "flexible", "prayers": { "fajr": {"start": "-1h", "end": "+1h"}, "dhuhr": {"start": "-1h", "end": "+1h"}, "asr": {"start": "-1h", "end": "+1h"}, "maghrib": {"start": "-1h", "end": "+1h"}, "isha": {"start": "-1h", "end": "+1h"} }, "jummah": {"start": "00:00", "end": "23:59"}, "ramadan": {"start": "Fajr", "end": "Maghrib", "days": "all_week"}, "sacred_months": ["Muharram", "Dhul-Qi’dah", "Dhul-Hijjah", "Rajab"], "special_days": {"start": "00:00", "end": "23:59", "days": "all_special"} } 
+2.1.2 Full Protection (Strict Lock)
+Characteristics:
+• Fully blocks all digital content except essential Islamic resources and AmnShield Default Tab
+• Non-bypassable except via AmnShield Unlock Code
+• Tamper detection triggers full lockdown if override is attempted
+JSON Example:
+{ "mode": "islamic", "variant": "full_protection", "lockState": "strict", "requiresUnlockCode": true, "blockedCategories": ["all"], "whitelist": ["amn-shield-tab", "quran.com", "sunnah.com"] } 
+2.2 Work Mode
+• Time-based blocking during work hours
+• Whitelist for productivity/business websites
+• Optional focus sessions (Pomodoro or deep-focus timer)
+• Syncs with Default Tab for motivation and reminders
+2.3 School Mode
+• Timetable-based blocking (select days and school hours)
+• Blocks entertainment, social media, gaming
+• Optional timed study breaks
+• Default Tab displays study motivation and goal tracking
+2.4 Personal Protection Mode
+• Custom digital discipline schedule
+• Blocks distractions during selected hours
+• Optional weekend relax periods
+• Syncs with mobile app notifications
+3. Time & Timetable Blocking System
+Core Features:
+• Shared scheduler engine for all modes
+• Blocks based on: 
+• Daily prayer times (Islamic Mode)
+• Sleep times (Islamic Mode)
+• Work/School schedules
+• Custom personal schedules
+Built-in schedule templates:
+• School
+• Work
+• Personal
+• Islamic
+Block Categories:
+• Social Media
+• Entertainment
+• Games
+• Streaming
+• Shopping
+• Adult/Haram content
+• News (optional)
+• Custom URLs
+User Interface:
+• Weekly grid for easy schedule setup
+• Drag-to-select time ranges
+• Assign categories to block
+• Toggle repeat days (Mon–Sun)
+• Sync across devices
+4. Default Tab Integration
+• Displays Islamic reminders, prayer countdowns, du‘ā, Qur’an, Hadith
+• Reflects current mode and schedule
+• Special notifications for: 
+• Ramadan
+• Sacred months
+• Laylat al-Qadr, Eid, Ashura
+• Communicates with extension core via secure messaging for live updates
+5. Technical Architecture
+ComponentFunctionExtension CoreBlocking engine, mode enforcement, scheduler, tamper detectionDefault TabDisplays spiritual and motivational contentCloud BackendUnlock code verification, schedule sync, audit logsPrayer APIGeo-based prayer timesHijri Calendar APIDetects Ramadan, sacred months, Jumu‘ah, special daysTamper GuardDetects override attempts, triggers lockdown 
+6. Implementation Phases
+PhaseFeatureDescription1Base Blocking EngineCategory-based and time-based blocking2Flexible Islamic ModePrayer, sacred months, Ramadan, Jumu‘ah, special days3Full Protection ModeStrict lockdown, unlock code system4Work/School/Personal ModesTimetable editor, templates, focus timers5Default Tab IntegrationDynamic display of reminders, prayer times, motivation6Cloud BackendSync, unlock codes, tamper logs, cross-device enforcement 
+7. Developer Notes
+• All schedules and mode states stored encrypted in local storage
+• Cloud sync ensures consistent behavior across devices
+• JSON configurations for each mode for API communication
+• Tamper detection triggers full lockdown in Full Protection mode
+• Default Tab communicates with extension via secure messaging (chrome.runtime.sendMessage)
+✅ This document is fully ready for GitHub or as a developer prompt for implementation. It includes all time-based rules, sacred months, special days, Ramadan, Jumu‘ah, prayer times, and modes.

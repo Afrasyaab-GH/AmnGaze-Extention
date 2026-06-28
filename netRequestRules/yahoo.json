@@ -1,0 +1,85 @@
+[
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "https",
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "vm",
+                "value": "r"
+              },
+              {
+                "key": "safesearch",
+                "value": "1"
+              },
+              {
+                "key": "filter",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "xmlhttprequest"
+      ],
+      "requestDomains": [
+        "search.yahoo.com",
+        "www.search.yahoo.com",
+        "yahoo.com",
+        "www.yahoo.com",
+        "yahoo.ca",
+        "www.yahoo.ca",
+        "yahoo.co.uk",
+        "www.yahoo.co.uk",
+        "yahoo.co.in",
+        "www.yahoo.co.in",
+        "yahoo.com.au",
+        "www.yahoo.com.au",
+        "yahoo.fr",
+        "www.yahoo.fr",
+        "yahoo.de",
+        "www.yahoo.de",
+        "yahoo.it",
+        "www.yahoo.it",
+        "yahoo.es",
+        "www.yahoo.es",
+        "yahoo.com.ar",
+        "www.yahoo.com.ar",
+        "yahoo.com.br",
+        "www.yahoo.com.br",
+        "yahoo.com.mx",
+        "www.yahoo.com.mx",
+        "yahoo.com.sg",
+        "www.yahoo.com.sg",
+        "yahoo.com.tw",
+        "www.yahoo.com.tw",
+        "yahoo.com.hk",
+        "www.yahoo.com.hk",
+        "yahoo.com.my",
+        "www.yahoo.com.my",
+        "yahoo.com.ph",
+        "www.yahoo.com.ph",
+        "yahoo.com.vn",
+        "www.yahoo.com.vn",
+        "yahoo.com.id",
+        "www.yahoo.com.id",
+        "yahoo.com.th",
+        "www.yahoo.com.th",
+        "yahoo.co.nz",
+        "www.yahoo.co.nz",
+        "yahoo.co.za",
+        "www.yahoo.co.za"
+      ]
+    }
+  }
+]

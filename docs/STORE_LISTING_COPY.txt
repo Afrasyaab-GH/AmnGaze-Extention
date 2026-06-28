@@ -1,0 +1,347 @@
+===========================================
+DEEN SHIELD - STORE LISTING COPY
+===========================================
+
+===========================================
+1. SHORT DESCRIPTION (132 chars for Chrome)
+===========================================
+
+Block haram sites, reduce distractions. Islamic new tab with Qur'an, adhkaar, prayer times. Stay focused, browse safely. 🕌
+
+Character count: 131
+
+Alternative (132 chars):
+Your Islamic browsing companion. Blocks harmful content, shows Qur'an & prayer times. Faith-aligned protection & productivity. ☪️
+
+Character count: 132
+
+===========================================
+2. PROMOTIONAL TILE TEXT (Chrome)
+===========================================
+
+Stay Focused
+Browse Safely
+Live by Your Values
+
+===========================================
+3. DETAILED DESCRIPTION (First 500 chars)
+===========================================
+
+Amn Shield – Stay Focused, Browse Safely, Live by Your Values
+
+Amn Shield is a Chrome extension that helps Muslims stay productive and protect their faith online. It blocks haram and harmful content, reduces distractions, and provides an optional Islamic new-tab experience with Qur'an, adhkaar, and prayer times — right when you start your browsing.
+
+Why install Amn Shield?
+
+Faith-aligned protection – filters categories like gambling, riba/interest, adult content, and more.
+Stay focused – reduce social media and time-wasting sites so you can use your time wisely.
+Personal control – add your own custom blocklists for tailored discipline.
+Daily spiritual boost – replace your new tab with Qur'an, recitations, adhkaar, and prayer times.
+Simple & private – works locally on your device, with no tracking or data collection.
+
+Perfect for students, professionals, and families who want to browse with peace of mind and align their online experience with Islamic values.
+
+===========================================
+4. KEY FEATURES (Bullet Points)
+===========================================
+
+✅ Block 10,000+ inappropriate websites automatically
+✅ Optional social media blocking (Facebook, Instagram, TikTok, YouTube, Twitter, etc.)
+✅ DeenHub Islamic new tab with Qur'an, adhkaar, and prayer times
+✅ 60+ authentic adhkaar from Hisnul Muslim with hadith sources
+✅ Interactive dhikr counter with progress tracking
+✅ 10+ Qur'an reciters including Abdul Basit, Mishary Alafasy, Saad Al-Ghamdi
+✅ Live prayer times with multiple calculation methods
+✅ Advanced blur protection for inappropriate images
+✅ Custom keyword and domain blocking
+✅ Safe Search enforcement (Google, Bing, DuckDuckGo, Yahoo)
+✅ Password lock to secure settings
+✅ 100% private - all data stays local, zero tracking
+✅ Beautiful glassmorphism UI with Islamic design
+✅ Cross-browser support (Chrome, Firefox, Edge)
+✅ Free forever, no hidden costs
+
+===========================================
+5. ONE-SENTENCE PITCH
+===========================================
+
+Amn Shield helps Muslims browse safely with automatic haram content blocking, distraction reduction, and an inspiring Islamic new tab featuring Qur'an, adhkaar, and prayer times - all while respecting your privacy with 100% local storage.
+
+===========================================
+6. CALL TO ACTION
+===========================================
+
+🕌 Install Amn Shield today and transform your browsing experience! Stay focused, browse safely, and stay spiritually connected - all with one powerful extension.
+
+===========================================
+7. SOCIAL MEDIA POST (280 chars - Twitter)
+===========================================
+
+🕌 Amn Shield: Your Islamic browsing companion
+
+✅ Block haram content
+✅ Reduce distractions  
+✅ Qur'an & prayer times new tab
+✅ 60+ authentic adhkaar
+✅ 100% private
+
+Transform your browsing. Stay connected to your faith.
+
+Free on Chrome/Firefox/Edge! 🌟
+
+===========================================
+8. FACEBOOK/LINKEDIN POST
+===========================================
+
+🕌 Introducing Amn Shield - Your Islamic Browsing Companion
+
+Are you struggling to maintain focus online? Worried about stumbling upon inappropriate content? Want to stay spiritually connected while browsing?
+
+Amn Shield is here to help! 
+
+🛡️ Smart Protection:
+• Blocks 10,000+ inappropriate websites
+• Optional social media blocking
+• Custom keyword & domain filters
+• Intelligent image blurring
+
+☪️ Spiritual Connection:
+• DeenHub Islamic new tab
+• Daily Qur'an with 10+ reciters
+• 60+ authentic adhkaar from Hisnul Muslim
+• Live prayer times for your location
+• Interactive dhikr counter
+
+🔒 Privacy First:
+• 100% local storage
+• Zero tracking or data collection
+• No external servers
+• Open source code
+
+Perfect for students, professionals, and families. Free forever!
+
+Download now for Chrome, Firefox, or Edge.
+
+🌟 Stay focused. Browse safely. Live by your values.
+
+#AmnShield #IslamicTech #Muslim #Productivity #DigitalWellbeing #Halal #Islamic #Faith
+
+===========================================
+9. PROMOTIONAL IMAGES TEXT SUGGESTIONS
+===========================================
+
+Image 1: Hero Image
+"Amn Shield"
+"Your Islamic Browsing Companion"
+"Block Haram • Stay Focused • Spiritual Growth"
+
+Image 2: Features
+"Smart Protection"
+"10,000+ Sites Blocked"
+"Social Media Control"
+"Custom Filters"
+
+Image 3: DeenHub
+"DeenHub - Islamic New Tab"
+"Qur'an • Adhkaar • Prayer Times"
+"Stay Connected to Your Faith"
+
+Image 4: Privacy
+"100% Private"
+"Zero Tracking"
+"All Data Stays Local"
+
+Image 5: Free
+"Free Forever"
+"No Hidden Costs"
+"For the Muslim Ummah"
+
+===========================================
+10. YOUTUBE VIDEO SCRIPT (60 seconds)
+===========================================
+
+[0-5s] Text on screen: "Struggling to stay focused online?"
+[5-10s] Show person distracted by social media
+[10-15s] Text: "Worried about inappropriate content?"
+[15-20s] Logo reveal: "Introducing Amn Shield"
+[20-30s] Show features:
+  - "Block haram content automatically"
+  - "Reduce social media distractions"
+  - "Islamic new tab with Qur'an & prayer times"
+[30-40s] Show DeenHub interface:
+  - Qur'an verse with recitation
+  - Adhkaar collection
+  - Prayer times widget
+  - Dhikr counter
+[40-50s] Text: "100% Private • Zero Tracking • Free Forever"
+[50-55s] "Transform your browsing experience"
+[55-60s] "Download Amn Shield today"
+CTA: Website URL and download links
+
+===========================================
+11. EMAIL ANNOUNCEMENT
+===========================================
+
+Subject: 🕌 Amn Shield v1.7 - Transform Your Browsing Experience
+
+Assalamu Alaikum,
+
+We're excited to announce the major release of Amn Shield v1.7 - your complete Islamic browsing companion!
+
+🌟 WHAT'S NEW:
+
+☪️ DeenHub - Islamic New Tab Experience
+Replace your boring new tab with an inspiring Islamic home page featuring:
+• Daily Qur'an verses with audio recitation (10+ reciters)
+• 60+ authentic adhkaar from Hisnul Muslim
+• Live prayer times for your location
+• Interactive dhikr counter with progress tracking
+• Beautiful modern design with Islamic aesthetics
+
+🛡️ Enhanced Protection:
+• 10,000+ inappropriate websites blocked automatically
+• Advanced image blurring technology
+• Social media blocking (optional)
+• Custom keyword and domain filters
+• Safe Search enforcement
+
+🔒 Complete Privacy:
+• 100% local storage
+• Zero tracking or data collection
+• No external servers
+• Open source and transparent
+
+💯 FREE FOREVER - No hidden costs, no subscriptions
+
+Perfect for students, professionals, and families who want to:
+✅ Stay focused and productive
+✅ Protect themselves from haram content
+✅ Stay spiritually connected throughout the day
+✅ Maintain Islamic values online
+
+Download now for Chrome, Firefox, or Edge:
+[Chrome Web Store Link]
+[Firefox Add-ons Link]
+[Edge Add-ons Link]
+
+JazakAllahu Khair,
+The Alhaq Initiative Team
+
+P.S. We'd love your feedback! Reply to this email or visit our GitHub page.
+
+===========================================
+12. PRESS RELEASE HEADLINE & SUBHEAD
+===========================================
+
+HEADLINE:
+Alhaq Initiative Launches Amn Shield v1.7: Comprehensive Islamic Browsing Companion with DeenHub New Tab Experience
+
+SUBHEAD:
+New Browser Extension Helps Muslims Stay Productive, Block Harmful Content, and Maintain Spiritual Connection with Qur'an, Adhkaar, and Prayer Times - All While Respecting Privacy with 100% Local Storage
+
+===========================================
+13. SEO META DESCRIPTION
+===========================================
+
+Amn Shield: Islamic browser extension blocking haram content, social media distractions. Features DeenHub new tab with Qur'an, adhkaar, prayer times. 100% private. Free for Chrome, Firefox, Edge.
+
+Character count: 198 (under 160 recommended, but includes all keywords)
+
+Short version (160 chars):
+Block haram sites & distractions. Islamic new tab with Qur'an, adhkaar, prayer times. 100% private. Free for Chrome/Firefox/Edge. Transform your browsing!
+
+===========================================
+14. SEARCH KEYWORDS (for ASO)
+===========================================
+
+Primary Keywords:
+- Islamic browser extension
+- Muslim content blocker
+- Halal internet filter
+- Islamic new tab
+- Prayer times extension
+- Quran browser
+- Adhkaar reminder
+- Islamic productivity
+
+Secondary Keywords:
+- Parental control Islam
+- Website blocker Muslim
+- Faith-based browser
+- Islamic focus tool
+- Deen protection
+- Halal browsing
+- Muslim app
+- Islamic reminder
+
+Long-tail Keywords:
+- Block adult content Islam
+- Muslim social media blocker
+- Quran new tab extension
+- Islamic prayer times chrome
+- Authentic adhkaar browser
+- Muslim productivity tool
+- Halal internet protection
+- Islamic digital wellbeing
+
+===========================================
+15. COMPARISON TO COMPETITORS
+===========================================
+
+Why Choose Amn Shield Over Generic Content Blockers?
+
+❌ Other Blockers:
+• No Islamic features
+• No spiritual content
+• Generic protection
+• Often paid/subscription
+• May track your data
+
+✅ Amn Shield:
+• Built specifically for Muslims
+• DeenHub with Qur'an & adhkaar
+• Faith-aligned filtering
+• Completely free forever
+• 100% private, zero tracking
+• Developed by Islamic organization
+• Open source and transparent
+
+===========================================
+16. FAQ QUICK ANSWERS
+===========================================
+
+Q: Is Amn Shield free?
+A: Yes! Completely free forever with no hidden costs or subscriptions.
+
+Q: Does it track my browsing?
+A: Never. 100% local storage, zero tracking, no data collection.
+
+Q: Can I customize what gets blocked?
+A: Absolutely! Add custom keywords and domains, toggle social media blocking.
+
+Q: What's DeenHub?
+A: An Islamic new tab featuring Qur'an verses, 60+ adhkaar, prayer times, and dhikr counter.
+
+Q: Which browsers are supported?
+A: Chrome (v88+), Firefox (v109+), Edge (v88+), and Chromium-based browsers.
+
+Q: Can I disable DeenHub but keep the blocking?
+A: Yes! All features are independently toggleable in settings.
+
+Q: Is the content authentic?
+A: Yes! Adhkaar sourced from Hisnul Muslim with hadith references. Qur'an from authentic sources.
+
+Q: Can I password protect settings?
+A: Yes! Optional password lock prevents unauthorized changes.
+
+===========================================
+17. CHROME WEB STORE PERMISSION JUSTIFICATIONS
+===========================================
+
+contentSettings Permission Justification:
+Amn Shield uses the contentSettings permission to enforce Safe Search on search engines (Google, Bing, Yahoo, DuckDuckGo) as part of our faith-aligned protection features. This ensures users who enable Safe Search in settings have it consistently applied across all supported search engines, helping maintain a halal browsing environment. This is a core privacy and protection feature requested by Muslim families and students to prevent exposure to inappropriate content in search results.
+
+alarms Permission Justification:
+Amn Shield uses the alarms permission to provide accurate Islamic prayer time notifications and reminders. The extension calculates and schedules alarms for the five daily prayers (Fajr, Dhuhr, Asr, Maghrib, Isha) based on the user's location and selected calculation method. These scheduled reminders help Muslims maintain their spiritual obligations throughout their browsing day. Additionally, alarms are used to refresh prayer time calculations daily and manage timed reminder features for adhkaar (Islamic supplications).
+
+===========================================

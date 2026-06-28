@@ -1,0 +1,49 @@
+[
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "https",
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "kp",
+                "value": "1"
+              },
+              {
+                "key": "safe",
+                "value": "1"
+              },
+              {
+                "key": "safesearch",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "xmlhttprequest"
+      ],
+      "requestDomains": [
+        "duckduckgo.com",
+        "www.duckduckgo.com",
+        "duck.com",
+        "www.duck.com",
+        "duckduckgo.co",
+        "www.duckduckgo.co",
+        "duckduckgo.org",
+        "www.duckduckgo.org",
+        "duckduckgo.net",
+        "www.duckduckgo.net"
+      ]
+    }
+  }
+]

@@ -1,0 +1,85 @@
+[
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "https",
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "adlt",
+                "value": "strict"
+              },
+              {
+                "key": "safesearch",
+                "value": "strict"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "xmlhttprequest"
+      ],
+      "requestDomains": [
+        "bing.com",
+        "www.bing.com",
+        "bing.net",
+        "www.bing.net",
+        "bing.co",
+        "www.bing.co",
+        "bing.org",
+        "www.bing.org",
+        "bing.asia",
+        "www.bing.asia",
+        "bing.ca",
+        "www.bing.ca",
+        "bing.cn",
+        "www.bing.cn",
+        "bing.co.in",
+        "www.bing.co.in",
+        "bing.co.jp",
+        "www.bing.co.jp",
+        "bing.co.kr",
+        "www.bing.co.kr",
+        "bing.co.uk",
+        "www.bing.co.uk",
+        "bing.com.au",
+        "www.bing.com.au",
+        "bing.com.br",
+        "www.bing.com.br",
+        "bing.com.cn",
+        "www.bing.com.cn",
+        "bing.com.hk",
+        "www.bing.com.hk",
+        "bing.com.mx",
+        "www.bing.com.mx",
+        "bing.com.my",
+        "www.bing.com.my",
+        "bing.com.ph",
+        "www.bing.com.ph",
+        "bing.com.sg",
+        "www.bing.com.sg",
+        "bing.com.tw",
+        "www.bing.com.tw",
+        "bing.de",
+        "www.bing.de",
+        "bing.fr",
+        "www.bing.fr",
+        "bing.it",
+        "www.bing.it",
+        "bing.es",
+        "www.bing.es",
+        "bing.ru",
+        "www.bing.ru"
+      ]
+    }
+  }
+]
