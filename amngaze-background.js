@@ -112,7 +112,6 @@ chrome.storage.onChanged.addListener((changes, area) => {
             }).catch(() => { });
         }
     }
-    }
 
     // Broadcast incremental updates (updateSettings) to all tabs and extension runtimes
     for (let key in newValue) {
