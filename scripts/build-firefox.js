@@ -94,6 +94,9 @@ if (fs.existsSync(chromeManifestPath)) {
       data_collection_permissions: {
         required: ["none"]
       }
+    },
+    gecko_android: {
+      strict_min_version: "115.0"
     }
   };
   
