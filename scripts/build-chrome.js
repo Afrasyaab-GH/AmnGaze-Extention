@@ -13,6 +13,8 @@ const includeDirs = [
   "data",
   "DeenTab",
   "dist",
+  "offscreen.html",
+  "offscreen.js",
   "images",
   "netRequestRules",
   "scripts",

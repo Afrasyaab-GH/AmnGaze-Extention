@@ -48,13 +48,43 @@ chrome.runtime.onInstalled.addListener(() => {
 
 // Create/manage offscreen document
 async function ensureOffscreenDocument() {
-    // Disabled for serverless / free version
-    return Promise.resolve();
+    try {
+        const hasDoc = await chrome.offscreen.hasDocument();
+        if (hasDoc) return;
+
+        if (creatingOffscreen) {
+            await creatingOffscreen;
+            return;
+        }
+
+        creatingOffscreen = chrome.offscreen.createDocument({
+            url: chrome.runtime.getURL("dist/offscreen.html"),
+            reasons: ["DOM_PARSER", "IFRAME_SCRIPTING"],
+            justification: "Process Images and Firebase Authentication"
+        });
+
+        await creatingOffscreen;
+        console.log("[amngaze-BG] Offscreen document created.");
+    } catch (err) {
+        if (!err.message.includes("single")) {
+            console.error("[amngaze-BG] Error creating offscreen document:", err);
+        }
+    } finally {
+        creatingOffscreen = null;
+    }
 }
 
 // Recreate offscreen document helper
 async function recreateOffscreen() {
-    return Promise.resolve();
+    try {
+        const hasDoc = await chrome.offscreen.hasDocument();
+        if (hasDoc) {
+            await chrome.offscreen.closeDocument();
+        }
+    } catch (e) { }
+    setTimeout(() => {
+        ensureOffscreenDocument();
+    }, 1000);
 }
 
 // Watch settings changes and broadcast to tabs/offscreen

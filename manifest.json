@@ -1,5 +1,9 @@
 {
    "action": {
+      "default_icon": {
+         "48": "src/assets/amngaze-icon-48.png",
+         "128": "src/assets/amngaze-icon-128.png"
+      },
       "default_popup": "dist/popup/popup.html",
       "default_title": "AmnGaze"
    },
@@ -46,7 +50,8 @@
       "scripting",
       "declarativeNetRequestWithHostAccess",
       "alarms",
-      "tabs"
+      "tabs",
+      "offscreen"
    ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "0.1.9",
@@ -59,6 +64,7 @@
          "resources": [
             "src/assets/*",
             "src/modules/auth.js",
+            "src/nsfwjs/*",
             "tfjs/*"
          ]
       }
