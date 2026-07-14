@@ -48,6 +48,10 @@ chrome.runtime.onInstalled.addListener(() => {
 
 // Create/manage offscreen document
 async function ensureOffscreenDocument() {
+    if (typeof chrome.offscreen === "undefined") {
+        console.log("[amngaze-BG] Offscreen API not supported on this browser.");
+        return;
+    }
     try {
         const hasDoc = await chrome.offscreen.hasDocument();
         if (hasDoc) return;
@@ -76,6 +80,7 @@ async function ensureOffscreenDocument() {
 
 // Recreate offscreen document helper
 async function recreateOffscreen() {
+    if (typeof chrome.offscreen === "undefined") return;
     try {
         const hasDoc = await chrome.offscreen.hasDocument();
         if (hasDoc) {
@@ -101,9 +106,12 @@ chrome.storage.onChanged.addListener((changes, area) => {
         ensureOffscreenDocument();
     } else if (!newValue.status && oldValue.status) {
         // Close if disabled
-        chrome.offscreen.hasDocument().then(hasDoc => {
-            if (hasDoc) chrome.offscreen.closeDocument();
-        }).catch(() => { });
+        if (typeof chrome.offscreen !== "undefined") {
+            chrome.offscreen.hasDocument().then(hasDoc => {
+                if (hasDoc) chrome.offscreen.closeDocument();
+            }).catch(() => { });
+        }
+    }
     }
 
     // Broadcast incremental updates (updateSettings) to all tabs and extension runtimes

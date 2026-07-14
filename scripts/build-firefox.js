@@ -77,22 +77,35 @@ if (fs.existsSync(chromeManifestPath)) {
   const firefoxManifest = { ...chromeManifest };
   
   // 1. Convert service_worker to background.scripts for Firefox
+  // We load BOTH background.js and offscreen.js in Firefox background page context
   if (firefoxManifest.background && firefoxManifest.background.service_worker) {
-    firefoxManifest.background.scripts = [firefoxManifest.background.service_worker];
+    firefoxManifest.background.scripts = [
+      firefoxManifest.background.service_worker,
+      "dist/offscreen.js"
+    ];
     delete firefoxManifest.background.service_worker;
   }
   
-  // 2. Add browser_specific_settings for Firefox
+  // 2. Add browser_specific_settings and data_collection_permissions for Firefox
   firefoxManifest.browser_specific_settings = {
     gecko: {
       id: "amngaze@alhaq.studio",
-      strict_min_version: "109.0"
+      strict_min_version: "115.0",
+      data_collection_permissions: {
+        required: ["none"]
+      }
     }
   };
   
-  // 3. Remove Chrome-specific properties
+  // 3. Remove Chrome-specific properties and incompatible options
   delete firefoxManifest.update_url;
   delete firefoxManifest.minimum_chrome_version;
+  delete firefoxManifest.incognito; // incognito: split is not supported in Firefox
+  
+  // 4. Remove offscreen permission since Firefox does not support/need it
+  if (Array.isArray(firefoxManifest.permissions)) {
+    firefoxManifest.permissions = firefoxManifest.permissions.filter(p => p !== "offscreen");
+  }
   
   fs.writeFileSync(path.join(outDir, "manifest.json"), JSON.stringify(firefoxManifest, null, 2), "utf8");
   console.log("Firefox manifest.json generated successfully.");
