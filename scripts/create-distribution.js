@@ -34,7 +34,33 @@ function main() {
 
   zipDirectory(chromeSrc, path.join(distDir, `amngaze-v${version}-Chrome.zip`));
   zipDirectory(firefoxSrc, path.join(distDir, `amngaze-v${version}-Firefox.zip`));
-  console.log("Distribution packages created.");
+
+  // Also build the source code package for Firefox store reviewer validation
+  console.log("Creating source code distribution package...");
+  const sourceOut = path.join(distDir, `amngaze-v${version}-Source.zip`);
+  if (fs.existsSync(sourceOut)) {
+    fs.rmSync(sourceOut, { force: true });
+  }
+  const result = spawnSync("tar", [
+    "-a", "-c", "-f", sourceOut,
+    "--exclude=node_modules",
+    "--exclude=build",
+    "--exclude=dist",
+    "--exclude=extracted_zip",
+    "--exclude=.git",
+    "--exclude=.github",
+    "--exclude=.gemini",
+    "--exclude=scratch",
+    "."
+  ], {
+    cwd: rootDir,
+    stdio: "inherit"
+  });
+  if (result.status !== 0) {
+    throw new Error(`Failed to create source code archive: ${sourceOut}`);
+  }
+
+  console.log("Distribution packages created successfully.");
 }
 
 try {
