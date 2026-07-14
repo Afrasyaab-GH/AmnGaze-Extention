@@ -36,7 +36,6 @@ const includeFiles = [
   "help.html",
   "help.js",
   "LICENSE",
-  "manifest-v2.json",
   "polyfill.js",
   "popup.css",
   "popup-ecosystem.js",
@@ -62,13 +61,44 @@ function copyIfExists(relativePath) {
   const source = path.join(rootDir, relativePath);
   if (!fs.existsSync(source)) return;
   const target = path.join(outDir, relativePath);
-  const normalizedTarget = relativePath === "manifest-v2.json" ? path.join(outDir, "manifest.json") : target;
-  fs.mkdirSync(path.dirname(normalizedTarget), { recursive: true });
-  fs.cpSync(source, normalizedTarget, { recursive: true, force: true, filter: (src) => !src.endsWith('.zip') });
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  fs.cpSync(source, target, { recursive: true, force: true, filter: (src) => !src.endsWith('.zip') });
 }
 
 resetDir(outDir);
 includeDirs.forEach(copyIfExists);
 includeFiles.forEach(copyIfExists);
+
+// Dynamically generate manifest.json for Firefox from standard manifest.json
+const chromeManifestPath = path.join(rootDir, "manifest.json");
+if (fs.existsSync(chromeManifestPath)) {
+  const chromeManifest = JSON.parse(fs.readFileSync(chromeManifestPath, "utf8"));
+  
+  const firefoxManifest = { ...chromeManifest };
+  
+  // 1. Convert service_worker to background.scripts for Firefox
+  if (firefoxManifest.background && firefoxManifest.background.service_worker) {
+    firefoxManifest.background.scripts = [firefoxManifest.background.service_worker];
+    delete firefoxManifest.background.service_worker;
+  }
+  
+  // 2. Add browser_specific_settings for Firefox
+  firefoxManifest.browser_specific_settings = {
+    gecko: {
+      id: "amngaze@alhaq.studio",
+      strict_min_version: "109.0"
+    }
+  };
+  
+  // 3. Remove Chrome-specific properties
+  delete firefoxManifest.update_url;
+  delete firefoxManifest.minimum_chrome_version;
+  
+  fs.writeFileSync(path.join(outDir, "manifest.json"), JSON.stringify(firefoxManifest, null, 2), "utf8");
+  console.log("Firefox manifest.json generated successfully.");
+} else {
+  console.error("Error: manifest.json not found in root.");
+  process.exit(1);
+}
 
 console.log(`Firefox build created at ${outDir}`);
