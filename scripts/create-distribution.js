@@ -11,8 +11,10 @@ const distDir = path.join(rootDir, "dist");
 const pkg = require(path.join(rootDir, "package.json"));
 
 function zipDirectory(sourceDir, outPath) {
-  const command = `Compress-Archive -Path "${sourceDir}\\*" -DestinationPath "${outPath}" -Force`;
-  const result = spawnSync("powershell", ["-NoProfile", "-Command", command], {
+  if (fs.existsSync(outPath)) {
+    fs.rmSync(outPath, { force: true });
+  }
+  const result = spawnSync("tar", ["-a", "-c", "-f", outPath, "-C", sourceDir, "."], {
     stdio: "inherit"
   });
   if (result.status !== 0) {
