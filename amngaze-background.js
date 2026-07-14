@@ -3,7 +3,7 @@
  * AI content blur background manager adapted from AmnGaze.
  */
 
-const SETTINGS_KEY = "amngaze-settings";
+const SETTINGS_KEY = "AmnGaze-settings";
 
 // Default Settings
 const DEFAULT_SETTINGS = {
@@ -89,10 +89,12 @@ async function recreateOffscreen() {
 
 // Watch settings changes and broadcast to tabs/offscreen
 chrome.storage.onChanged.addListener((changes, area) => {
-    if (area !== "sync" || !changes[SETTINGS_KEY]) return;
+    if (area !== "sync") return;
+    const settingsChange = changes["AmnGaze-settings"] || changes["amngaze-settings"];
+    if (!settingsChange) return;
 
-    const oldValue = changes[SETTINGS_KEY].oldValue || {};
-    const newValue = changes[SETTINGS_KEY].newValue || {};
+    const oldValue = settingsChange.oldValue || {};
+    const newValue = settingsChange.newValue || {};
 
     // Check if status is changed to true
     if (newValue.status && !oldValue.status) {
@@ -316,9 +318,10 @@ function injectReportModal(tabId, srcUrl, pageUrl, originalSrc) {
 
 // Handle messaging routing & lifecycle
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.type === "amngaze-getSettings") {
-        chrome.storage.sync.get([SETTINGS_KEY], (res) => {
-            sendResponse(res[SETTINGS_KEY] || DEFAULT_SETTINGS);
+    if (request.type === "amngaze-getSettings" || request.type === "AmnGaze-getSettings") {
+        chrome.storage.sync.get(["AmnGaze-settings", "amngaze-settings"], (res) => {
+            const config = res["AmnGaze-settings"] || res["amngaze-settings"] || DEFAULT_SETTINGS;
+            sendResponse(config);
         });
         return true;
     }
@@ -366,8 +369,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 // Auto-manage offscreen document on start
-chrome.storage.sync.get([SETTINGS_KEY], (res) => {
-    const config = res[SETTINGS_KEY] || DEFAULT_SETTINGS;
+chrome.storage.sync.get(["AmnGaze-settings", "amngaze-settings"], (res) => {
+    const config = res["AmnGaze-settings"] || res["amngaze-settings"] || DEFAULT_SETTINGS;
     if (config.status) {
         ensureOffscreenDocument();
     }

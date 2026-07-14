@@ -128,8 +128,8 @@ async function initCompanionReminder() {
         reminder.classList.add("hidden");
     });
 
-    const syncStorage = await chrome.storage.sync.get(["amngaze-settings"]);
-    const syncSettings = syncStorage["amngaze-settings"] || {};
+    const syncStorage = await chrome.storage.sync.get(["AmnGaze-settings", "amngaze-settings"]);
+    const syncSettings = syncStorage["AmnGaze-settings"] || syncStorage["amngaze-settings"] || {};
     applyCompanionReminderTranslations(syncSettings.language || "en");
 
     if (await shouldShowCompanionReminder(syncSettings)) {
