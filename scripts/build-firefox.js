@@ -36,7 +36,6 @@ const includeFiles = [
   "help.html",
   "help.js",
   "LICENSE",
-  "manifest-v2.json",
   "polyfill.js",
   "popup.css",
   "popup-ecosystem.js",
@@ -62,13 +61,60 @@ function copyIfExists(relativePath) {
   const source = path.join(rootDir, relativePath);
   if (!fs.existsSync(source)) return;
   const target = path.join(outDir, relativePath);
-  const normalizedTarget = relativePath === "manifest-v2.json" ? path.join(outDir, "manifest.json") : target;
-  fs.mkdirSync(path.dirname(normalizedTarget), { recursive: true });
-  fs.cpSync(source, normalizedTarget, { recursive: true, force: true, filter: (src) => !src.endsWith('.zip') });
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  fs.cpSync(source, target, { recursive: true, force: true, filter: (src) => !src.endsWith('.zip') });
 }
 
 resetDir(outDir);
 includeDirs.forEach(copyIfExists);
 includeFiles.forEach(copyIfExists);
+
+// Dynamically generate manifest.json for Firefox from standard manifest.json
+const chromeManifestPath = path.join(rootDir, "manifest.json");
+if (fs.existsSync(chromeManifestPath)) {
+  const chromeManifest = JSON.parse(fs.readFileSync(chromeManifestPath, "utf8"));
+  
+  const firefoxManifest = { ...chromeManifest };
+  
+  // 1. Convert service_worker to background.scripts for Firefox
+  // We load BOTH background.js and offscreen.js in Firefox background page context
+  if (firefoxManifest.background && firefoxManifest.background.service_worker) {
+    firefoxManifest.background.scripts = [
+      firefoxManifest.background.service_worker,
+      "dist/offscreen.js"
+    ];
+    delete firefoxManifest.background.service_worker;
+  }
+  
+  // 2. Add browser_specific_settings and data_collection_permissions for Firefox
+  firefoxManifest.browser_specific_settings = {
+    gecko: {
+      id: "amngaze@alhaq.studio",
+      strict_min_version: "140.0",
+      data_collection_permissions: {
+        required: ["none"]
+      }
+    },
+    gecko_android: {
+      strict_min_version: "142.0"
+    }
+  };
+  
+  // 3. Remove Chrome-specific properties and incompatible options
+  delete firefoxManifest.update_url;
+  delete firefoxManifest.minimum_chrome_version;
+  delete firefoxManifest.incognito; // incognito: split is not supported in Firefox
+  
+  // 4. Remove offscreen permission since Firefox does not support/need it
+  if (Array.isArray(firefoxManifest.permissions)) {
+    firefoxManifest.permissions = firefoxManifest.permissions.filter(p => p !== "offscreen");
+  }
+  
+  fs.writeFileSync(path.join(outDir, "manifest.json"), JSON.stringify(firefoxManifest, null, 2), "utf8");
+  console.log("Firefox manifest.json generated successfully.");
+} else {
+  console.error("Error: manifest.json not found in root.");
+  process.exit(1);
+}
 
 console.log(`Firefox build created at ${outDir}`);
