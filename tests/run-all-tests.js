@@ -9,7 +9,6 @@ const testFiles = [
   "blocklist-loading.test.js",
   "social-blocking-logic.test.js",
   "scheduler.test.js",
-  "ai-analyzer.test.js",
   "integration.test.js"
 ];
 

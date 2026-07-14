@@ -1,6 +1,6 @@
 /**
- * AmnShield Extension Connector
- * Communicates with AmnShield Desktop Guardian app
+ * AmnGaze Extension Connector
+ * Communicates with AmnGaze Desktop Guardian app
  * 
  * Al-Haq Studio
  * https://alhaq-initiative.org

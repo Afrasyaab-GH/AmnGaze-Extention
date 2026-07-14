@@ -27,8 +27,8 @@ assert.ok(Array.isArray(mv3.content_scripts) && mv3.content_scripts.length > 0, 
 [
   "dist/background.js",
   "dist/content.js",
-  "haramblur-background.js",
-  "haramblur-content.js"
+  "amngaze-background.js",
+  "amngaze-content.js"
 ].forEach((file) => assert.ok(exists(file), `${file} is missing`));
 
 if (mv3.content_security_policy?.extension_pages) {

@@ -30,8 +30,8 @@ function main() {
     throw new Error("Build outputs are missing. Run `npm run build` first.");
   }
 
-  zipDirectory(chromeSrc, path.join(distDir, `amn-shield-v${version}-Chrome.zip`));
-  zipDirectory(firefoxSrc, path.join(distDir, `amn-shield-v${version}-Firefox.zip`));
+  zipDirectory(chromeSrc, path.join(distDir, `amngaze-v${version}-Chrome.zip`));
+  zipDirectory(firefoxSrc, path.join(distDir, `amngaze-v${version}-Firefox.zip`));
   console.log("Distribution packages created.");
 }
 

@@ -9,7 +9,7 @@ You are an expert Web Extensions developer working on **AmnGaze Extension** - a 
 * **Specification**: Chrome Extension Manifest V3
 * **Tech Stack**: Javascript (ES6), HTML5, CSS3, TensorFlow.js (TFJS)
 * **Target Platforms**: Chrome, Edge, Brave, Opera
-* **Repository**: [https://github.com/alhaq-initiative/AmnGaze-Extension](https://github.com/alhaq-initiative/AmnGaze-Extension)
+* **Repository**: [https://github.com/alhaq-initiative/amngaze-Extension](https://github.com/alhaq-initiative/amngaze-Extension)
 
 ---
 
@@ -18,8 +18,8 @@ You are an expert Web Extensions developer working on **AmnGaze Extension** - a 
 ### Core Files
 
 * **`manifest.json`**: Manifest configuration defining content scripts, background service workers, and host permissions.
-* **`haramblur-content.js`**: Content script injected into webpages. Monitors the DOM via MutationObservers, extracts image URLs, applies CSS classes to blur them, and communicates with the background script.
-* **`haramblur-background.js`**: Background service worker. Loads the local TensorFlow.js models, runs frame classifications, and coordinates extension settings.
+* **`amngaze-content.js`**: Content script injected into webpages. Monitors the DOM via MutationObservers, extracts image URLs, applies CSS classes to blur them, and communicates with the background script.
+* **`amngaze-background.js`**: Background service worker. Loads the local TensorFlow.js models, runs frame classifications, and coordinates extension settings.
 * **`tfjs/`**: Contains the pre-bundled local models (`.json` config and binary weight chunks) to ensure 100% offline functionality.
 
 ---

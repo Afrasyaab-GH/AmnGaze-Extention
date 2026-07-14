@@ -4,7 +4,7 @@
 
 ### Title
 
-Amn Shield - Islamic Content Blocker
+AmnGaze - Islamic Content Blocker
 
 ### Short Description (132 characters max)
 
@@ -12,7 +12,7 @@ Professional Islamic content blocker by Al-Haq Studio helping Muslims maintain h
 
 ### Detailed Description
 
-??? **Amn Shield - Professional Islamic Content Blocker**
+??? **AmnGaze - Professional Islamic Content Blocker**
 **Developed by Alhaq Initiative**
 
 Maintain halal browsing habits with our comprehensive content blocking solution designed specifically for the Muslim community by Islamic technology experts.
@@ -47,7 +47,7 @@ Al-Haq Studio is a specialized Islamic technology company dedicated to creating 
 **?? COMMUNITY DRIVEN:**
 Developed by Muslim technologists following Islamic principles of promoting good (Ma'ruf) and preventing harm (Munkar).
 
-Transform your browsing experience while staying true to Islamic values. Install Amn Shield today and join thousands of Muslims creating a cleaner internet experience.
+Transform your browsing experience while staying true to Islamic values. Install AmnGaze today and join thousands of Muslims creating a cleaner internet experience.
 
 **?? Contact:** <https://alhaq-initiative.org/contact>
 **?? Company:** <https://alhaq-initiative.org>
@@ -71,13 +71,13 @@ islamic, content-blocker, privacy, security, halal, muslim, deen, parental-contr
 ## ?? Firefox Add-ons (AMO) Listing
 
 ### Name
-Amn Shield - Islamic Content Blocker
+AmnGaze - Islamic Content Blocker
 
 ### Summary (250 characters max)
 Professional Islamic content blocker by Al-Haq Studio helping Muslims maintain halal browsing habits. Block inappropriate content, social media, and custom keywords with complete privacy.
 
 ### Description
-??? **Amn Shield - Professional Islamic Content Blocker**
+??? **AmnGaze - Professional Islamic Content Blocker**
 **By Alhaq Initiative **
 
 A comprehensive, privacy-first content blocking solution designed specifically for the Muslim community by Islamic technology experts who understand the unique needs of Muslim internet users.
@@ -134,14 +134,14 @@ Developed following Islamic principles of:
 - Parents implementing digital guidelines
 - Anyone wanting Islamic-compliant browsing
 
-Join thousands of Muslims who have transformed their browsing experience with Amn Shield. Create a cleaner, more focused internet environment that aligns with your Islamic values.
+Join thousands of Muslims who have transformed their browsing experience with AmnGaze. Create a cleaner, more focused internet environment that aligns with your Islamic values.
 
 **Support & Company:**
 - Company: Al-Haq Studio
 - Website: https://alhaq-initiative.org
 - Contact: https://alhaq-initiative.org/contact
 - Support: support@alhaq.uk
-- Source Code: github.com/alhaq-initiative/amn-shield
+- Source Code: github.com/Afrasyaab-GH/amngaze-Extention
 
 *May Allah accept this effort and make it beneficial for the Ummah. Ameen.*
 
@@ -163,7 +163,7 @@ islamic, content-blocker, privacy, security, halal, muslim, web-filter, parental
 
 ### Title
 
-Amn Shield - Islamic Content Blocker
+AmnGaze - Islamic Content Blocker
 
 ### Short Description
 
@@ -236,7 +236,7 @@ Professional Islamic content blocker by Al-Haq Studio for Muslims maintaining ha
 ### Social Media Post
 
 ```
-??? Introducing Amn Shield by Al-Haq Studio!
+??? Introducing AmnGaze by Al-Haq Studio!
 
 The professional Islamic content blocker developed by Muslim technologists for the Muslim community.
 
@@ -250,7 +250,7 @@ Available now on Chrome, Firefox, and Edge web stores!
 
 Help us spread the word and protect our Ummah's digital experience.
 
-#AmnShield #AlhaqDigital #Al-Haq Studio #IslamicTech #HalalBrowsing #MuslimDevelopers #ContentBlocker
+#AmnGaze #AlhaqDigital #Al-Haq Studio #IslamicTech #HalalBrowsing #MuslimDevelopers #ContentBlocker
 
 Developed by: @AlhaqInitiative
 Website: https://alhaq-initiative.org
@@ -260,17 +260,17 @@ Download: [store links]
 
 ### Email Template
 
-Subject: ??? Amn Shield by Alhaq Initiative - Islamic Content Blocker Now Available
+Subject: ??? AmnGaze by Alhaq Initiative - Islamic Content Blocker Now Available
 
 Bismillah hirRahman nirRaheem
 Assalamu Alaikum wa Rahmatullahi wa Barakatuh,
 
-We're excited to announce the launch of **Amn Shield**, developed by **Alhaq Initiative** - a professional Islamic content blocker designed specifically for the Muslim community.
+We're excited to announce the launch of **AmnGaze**, developed by **Alhaq Initiative** - a professional Islamic content blocker designed specifically for the Muslim community.
 
 **About Alhaq Initiative:**
 We are an Islamic technology company dedicated to creating digital solutions that align with Islamic values and serve the global Muslim community.
 
-**What is Amn Shield?**
+**What is AmnGaze?**
 A comprehensive browser extension that helps Muslims maintain halal browsing habits by blocking inappropriate content, social media distractions, and custom keywords - all with complete privacy protection.
 
 **Key Features:**
@@ -288,10 +288,10 @@ A comprehensive browser extension that helps Muslims maintain halal browsing hab
 - Firefox Add-ons: [link]  
 - Edge Add-ons: [link]
 
-**Why Choose Amn Shield by Al-Haq Studio?**
-Created by Muslim developers at Alhaq Initiative following Islamic principles, Amn Shield helps you create a cleaner internet experience that aligns with your values while supporting Islamic business.
+**Why Choose AmnGaze by Al-Haq Studio?**
+Created by Muslim developers at Alhaq Initiative following Islamic principles, AmnGaze helps you create a cleaner internet experience that aligns with your values while supporting Islamic business.
 
-Join thousands of Muslims already using Amn Shield to transform their browsing experience.
+Join thousands of Muslims already using AmnGaze to transform their browsing experience.
 
 **Company Contact:**
 

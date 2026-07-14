@@ -367,7 +367,7 @@
      * Reset schedule to default template
      */
     resetSchedule(templateName = 'personal') {
-      const scheduler = global.AmnShield?.scheduler;
+      const scheduler = global.AmnGaze?.scheduler;
       if (!scheduler) return;
 
       // Get default template
@@ -418,7 +418,7 @@
   }
 
   // Expose globally
-  global.AmnShield = global.AmnShield || {};
-  global.AmnShield.TimetableEditor = TimetableEditor;
+  global.AmnGaze = global.AmnGaze || {};
+  global.AmnGaze.TimetableEditor = TimetableEditor;
 
 })(typeof self !== 'undefined' ? self : (typeof globalThis !== 'undefined' ? globalThis : window));

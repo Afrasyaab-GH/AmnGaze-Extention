@@ -1,6 +1,6 @@
 const confirmationText =
     "This site shouldn't be blocked. I accept the risks, and I won't regret this choice.";
-const REMINDER_STORAGE_KEY = "hb-contextual-premium-reminders";
+const REMINDER_STORAGE_KEY = "amngaze-contextual-premium-reminders";
 const BLOCKED_REMINDER_KEY = "blockedCompanionDismissedAt";
 const REMINDER_COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000;
 const BLOCKED_REMINDER_TRANSLATIONS = {
@@ -128,8 +128,8 @@ async function initCompanionReminder() {
         reminder.classList.add("hidden");
     });
 
-    const syncStorage = await chrome.storage.sync.get(["hb-settings"]);
-    const syncSettings = syncStorage["hb-settings"] || {};
+    const syncStorage = await chrome.storage.sync.get(["amngaze-settings"]);
+    const syncSettings = syncStorage["amngaze-settings"] || {};
     applyCompanionReminderTranslations(syncSettings.language || "en");
 
     if (await shouldShowCompanionReminder(syncSettings)) {
@@ -140,7 +140,7 @@ async function initCompanionReminder() {
 function reportAndUnblock() {
     const e = new URLSearchParams(window.location.search).get("url");
     chrome.runtime.sendMessage(
-        { type: "hb-reportBlockedSite", url: e },
+        { type: "amngaze-reportBlockedSite", url: e },
         (t) => {
             t.success && window.location.replace(e);
         }
@@ -202,7 +202,7 @@ const checkDNS = async function () {
 
         // Send notification to background script for companion mode email
         chrome.runtime.sendMessage({
-            type: "hb-harmfulSiteBlocked",
+            type: "amngaze-harmfulSiteBlocked",
             url,
         });
 

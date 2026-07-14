@@ -23,8 +23,8 @@ const includeDirs = [
 
 const includeFiles = [
   "background.js",
-  "haramblur-background.js",
-  "haramblur-content.js",
+  "amngaze-background.js",
+  "amngaze-content.js",
   "block.html",
   "constants.js",
   "content.js",
@@ -34,8 +34,6 @@ const includeFiles = [
   "help.js",
   "LICENSE",
   "manifest.json",
-  "offscreen.html",
-  "offscreen.js",
   "polyfill.js",
   "popup.css",
   "popup-ecosystem.js",
@@ -63,7 +61,7 @@ function copyIfExists(relativePath) {
   if (!fs.existsSync(source)) return;
   const target = path.join(outDir, relativePath);
   fs.mkdirSync(path.dirname(target), { recursive: true });
-  fs.cpSync(source, target, { recursive: true, force: true });
+  fs.cpSync(source, target, { recursive: true, force: true, filter: (src) => !src.endsWith('.zip') });
 }
 
 resetDir(outDir);

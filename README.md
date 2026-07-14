@@ -18,8 +18,8 @@
 ## 🛠️ Architecture & Core Components
 
 *   `manifest.json`: Extension entry point configuring permissions, declarative net requests, and scripts.
-*   `haramblur-content.js`: Content script injected into webpages to monitor DOM changes, select images, and apply blurring stylesheets.
-*   `haramblur-background.js`: Background service worker managing the lifecycle, model loading, and coordination.
+*   `amngaze-content.js`: Content script injected into webpages to monitor DOM changes, select images, and apply blurring stylesheets.
+*   `amngaze-background.js`: Background service worker managing the lifecycle, model loading, and coordination.
 *   `tfjs/`: Pre-bundled TensorFlow.js models and weights for local execution.
 *   `tests/`: Suite for manifest validation and scheduler integrations.
 
@@ -31,11 +31,32 @@
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/alhaq-initiative/AmnGaze-Extension.git
+   git clone https://github.com/Afrasyaab-GH/amngaze-Extention.git
    ```
 2. Open your browser and navigate to the extensions page (e.g., `chrome://extensions`).
 3. Enable **Developer mode** in the top right.
 4. Click **Load unpacked** and select the repository root directory.
+
+---
+
+## 🛠️ Development & Building
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Build Chrome and Firefox extensions:**
+   ```bash
+   npm run build
+   ```
+3. **Generate ZIP packages for distribution:**
+   ```bash
+   npm run dist
+   ```
+4. **Run the local test suite:**
+   ```bash
+   npm run test
+   ```
 
 ---
 
